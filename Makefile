@@ -1,4 +1,4 @@
-C_FILES=./kernel.c ./shell/console.c
+C_FILES=./kernel.c ./shell/console.c ./device/portmap/portmap.c ./device/keyboard/keyboard.c
 O_FILES=${C_FILES:.c=.o}
 all: qemu_launch
 
@@ -17,4 +17,3 @@ ${O_FILES}:
 clean:
 	$(RM) *.o *.bin
 	find . -name \*.o | xargs --no-run-if-empty rm
-	tso so sooso 
